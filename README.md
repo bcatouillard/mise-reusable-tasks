@@ -10,13 +10,19 @@ Reusable [mise](https://mise.jdx.dev/) task collections you can include in your 
 
 ## Add a collection to your project
 
+First, you need to trust your project environment:
+
+```bash
+mise trust
+```
+
 Add the collection's `tasks.toml` path to the `includes` list in your project's `mise.toml`. For example, to include the AI skills and pre-commit collections:
 
 ```toml
 [task_config]
 includes = [
-  "git::https://github.com/bcatouillard/mise-reusable-tasks//mise-tasks/ai-skills/tasks.toml",
-  "git::https://github.com/bcatouillard/mise-reusable-tasks//mise-tasks/pre-commit/tasks.toml",
+  "git::https://github.com/bcatouillard/mise-reusable-tasks//mise-tasks/ai-skills/tasks.toml?ref=main",
+  "git::https://github.com/bcatouillard/mise-reusable-tasks//mise-tasks/pre-commit/tasks.toml?ref=main",
 ]
 ```
 
@@ -29,9 +35,9 @@ mise run pre-commit:run
 
 ## Available collections
 
-| Collection | Purpose | Documentation |
-| --- | --- | --- |
-| `ai-skills` | Install or update agent skills using GitHub CLI. | [Tasks, prerequisites, and usage](mise-tasks/ai-skills/README.md) |
+| Collection   | Purpose                                                 | Documentation                                                      |
+| ------------ | ------------------------------------------------------- | ------------------------------------------------------------------ |
+| `ai-skills`  | Install or update agent skills using GitHub CLI.        | [Tasks, prerequisites, and usage](mise-tasks/ai-skills/README.md)  |
 | `pre-commit` | Install pre-commit hooks and run them across all files. | [Tasks, prerequisites, and usage](mise-tasks/pre-commit/README.md) |
 
 The AI skills collection requires GitHub CLI (`gh`); the pre-commit collection requires `pre-commit`. Their collection READMEs list the available task names and aliases.
