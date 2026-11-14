@@ -1,0 +1,10 @@
+[tools]
+pre-commit = "4.7.0"
+
+[settings]
+experimental = true
+
+[task_config]
+includes = [
+  "",
+]

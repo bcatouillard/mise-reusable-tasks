@@ -1,0 +1,16 @@
+["skill:install"]
+alias = "skills:install"
+description = "Install new skill using GH CLI"
+run = "gh skill install --scope=project --agent=codex --dir=.github/skills"
+
+["skill:update"]
+alias = "skills:update"
+usage = 'arg "[skill]"'
+description = "Update all skills"
+run = "gh skill update ${usage_skill}"
+
+["skill:update:all"]
+alias = "skills:update:all"
+description = "Update all skills"
+run = "gh skill update --all"
+
