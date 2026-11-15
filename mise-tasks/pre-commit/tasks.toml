@@ -7,4 +7,5 @@ run = "pre-commit install"
 alias = "pre-commit:run"
 description = "Run pre-commits"
 run = "pre-commit run --all-files"
+depends = ["precommit-install"]
 

@@ -1,0 +1,25 @@
+---
+name: Run pre-commit hooks.
+
+on:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  pre-commit:
+    runs-on: [ubuntu-latest]
+    name: Run pre-commit
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
+
+      - name: Install tools
+        uses: jdx/mise-action@d5574b52816a478f9d4e6529a3f6ff17a8a36785 #v5.2.8
+
+      - name: Run pre-commit
+        run: mise run pre-commit-run
