@@ -1,10 +1,18 @@
 [tools]
 pre-commit = "4.7.0"
+editorconfig-checker = "4.0.2"
+jactionlint = "2.6.0"
+markdownlint-cli2 = "0.24.1"
+yamllint = "1.38.0"
+shellcheck = "0.11.0"
 
 [settings]
 experimental = true
 
 [task_config]
 includes = [
-  "",
+  "mise-tasks",
 ]
+
+[hooks]
+postinstall = "mise run precommit-install"

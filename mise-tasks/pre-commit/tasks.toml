@@ -1,10 +1,11 @@
 ["precommit-install"]
-alias = "pre-commit:install"
+alias = "pre-commit-install"
 description = "Install pre-commits hooks"
 run = "pre-commit install"
 
 ["precommit-run"]
-alias = "pre-commit:run"
+alias = "pre-commit-run"
 description = "Run pre-commits"
 run = "pre-commit run --all-files"
+depends = ["precommit-install"]
 

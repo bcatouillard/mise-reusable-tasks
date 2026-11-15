@@ -2,7 +2,11 @@
 
 Install the project's pre-commit hooks and run configured hooks across all files.
 
-**Prerequisite:** [pre-commit](https://pre-commit.com/) installed and available on `PATH`.
+## Prerequisites
+
+- [pre-commit](https://pre-commit.com/)
+
+## Tasks
 
 | Name                | Description               | Alias                |
 | ------------------- | ------------------------- | -------------------- |
