@@ -10,12 +10,6 @@ Reusable [mise](https://mise.jdx.dev/) task collections you can include in your 
 
 ## Add a collection to your project
 
-First, you need to trust your project environment:
-
-```bash
-mise trust
-```
-
 Add the collection's `tasks.toml` path to the `includes` list in your project's `mise.toml`. For example, to include the AI skills and pre-commit collections:
 
 ```toml
