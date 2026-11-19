@@ -21,8 +21,8 @@ Add the collection's `tasks.toml` path to the `includes` list in your project's 
 ```toml
 [task_config]
 includes = [
-  "git::https://github.com/bcatouillard/mise-reusable-tasks//mise-tasks/ai-skills/tasks.toml?ref=main",
-  "git::https://github.com/bcatouillard/mise-reusable-tasks//mise-tasks/pre-commit/tasks.toml?ref=main",
+  "git::https://github.com/bcatouillard/mise-reusable-tasks//mise-tasks/ai-skills/tasks.toml?ref=v1.0.0",
+  "git::https://github.com/bcatouillard/mise-reusable-tasks//mise-tasks/pre-commit/tasks.toml?ref=v1.0.0",
 ]
 ```
 
